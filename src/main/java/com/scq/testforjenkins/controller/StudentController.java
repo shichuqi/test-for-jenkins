@@ -21,6 +21,11 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @RequestMapping("hello")
+    public String toMain(){
+        return "Hello Word";
+    }
+
     @RequestMapping("findById")
     public String findById(Long id){
         return studentService.findById(id).toString();
